@@ -1,3 +1,6 @@
+//Überarbeitung und Implementierung Chaosteilchen
+
+
 package create;
 
 import java.io.BufferedReader;
@@ -6,8 +9,8 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-import givenpaket.HttpCommand;
-import givenpaket.InvalidRequestException;
+import givenpackage.HttpCommand;
+import givenpackage.InvalidRequestException;
 
 public abstract class AbstractSimpleRequest {
 

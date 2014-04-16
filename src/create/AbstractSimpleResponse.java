@@ -1,3 +1,6 @@
+//Überarbeitung und Implementierung vengith
+
+
 package create;
 
 import java.io.IOException;
@@ -7,8 +10,8 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
-import givenpaket.ContentType;
-import givenpaket.HttpStatus;
+import givenpackage.ContentType;
+import givenpackage.HttpStatus;
 
 public abstract class AbstractSimpleResponse {
 

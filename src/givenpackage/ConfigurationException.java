@@ -1,4 +1,4 @@
-package givenpaket;
+package givenpackage;
 
 public class ConfigurationException extends Exception {
 
