@@ -5,6 +5,7 @@ import givenpackage.InvalidRequestException;
 
 import java.io.IOException;
 import java.io.BufferedReader;
+import java.net.Socket;
 import java.util.Scanner;
 
 import create.AbstractSimpleRequest;
@@ -15,6 +16,10 @@ public class MySimpleRequest extends AbstractSimpleRequest{
 	in = new BuffferedReader(new InputStreamReader(socket.getInputStream()));	
 	
 	
+	public MySimpleRequest(Socket socket) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void parseRequest() throws IOException, InvalidRequestException {
 		String line = null;

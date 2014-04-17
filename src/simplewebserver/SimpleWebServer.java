@@ -16,7 +16,7 @@ public class SimpleWebServer {
 
 	public static void main(String[] args) throws IOException, ConfigurationException {
 		int port = STANDARD_PORT;
-		RessourceManager ressourceManager = new RessourceManagerImpl("./testdata");
+		RessourceManager ressourceManager = new MyRessourceManager("./testdata");
 		ServerSocket welcome = new ServerSocket(port);
 		while (true) {
 			Socket socket = welcome.accept();

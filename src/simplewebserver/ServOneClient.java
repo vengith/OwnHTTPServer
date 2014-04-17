@@ -31,11 +31,11 @@ public class ServOneClient extends Thread {
 	@Override
 	public void run() {
 
-		SimpleRequest request;
-		SimpleResponse response;
+		MySimpleRequest request;
+		MySimpleResponse response;
 		try {
-			request = new SimpleRequest(socket);
-			response = new SimpleResponse(socket);
+			request = new MySimpleRequest(socket);
+			response = new MySimpleResponse(socket);
 		} catch (IOException e1) {
 			// If we cannot create a request or a response on the socket, we
 			// cannot communicate with the client, so just print an error log

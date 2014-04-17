@@ -15,6 +15,10 @@ import create.RessourceManager;
 
 public class MyRessourceManager implements RessourceManager{
 
+	public MyRessourceManager(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void doGet(AbstractSimpleRequest request,
 			AbstractSimpleResponse response) throws IOException {
