@@ -1,6 +1,18 @@
 package givenpackage;
 
+public enum ContentType {
+	TEXT("text/plain"), HTML("text/html"), 
+	MP4("video/mp4"), MP3("audio/mpeg"), 
+	JPEG("image/jpeg"), PNG("image/png"), GIF("image/gif");
 
-public enum ContentType {TEXT, HTML, MP4, MP3, JPEG, PNG, GIF
+	private final String contentString;
+
+	private ContentType(String string) {
+		contentString = string;
+	}
+	
+	public String getContentString() {
+		return contentString;
+	}
 
 }

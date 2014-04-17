@@ -1,6 +1,3 @@
-//‹berarbeitung und Implementierung Chaosteilchen
-//Test Push!
-
 package create;
 
 import java.io.BufferedReader;
@@ -14,7 +11,8 @@ import givenpackage.InvalidRequestException;
 
 public abstract class AbstractSimpleRequest {
 
-	protected static Logger logger = Logger.getLogger(AbstractSimpleRequest.class.getName());
+	protected static Logger logger = Logger
+			.getLogger(AbstractSimpleRequest.class.getName());
 	protected HashMap<String, String> headers;
 	protected HashMap<String, String> params;
 	protected Socket socket;
@@ -90,6 +88,15 @@ public abstract class AbstractSimpleRequest {
 				+ protocolType + "]";
 	}
 
-	public abstract void parseRequest() throws IOException, InvalidRequestException;
+	/**
+	 * Liest zeilenweise den Request und f√ºllt damit das Request-Objekt.
+	 * 
+	 * @throws IOException
+	 *             bei Problemen mit der Socket-Verbindung
+	 * @throws InvalidRequestException
+	 *             wenn der Request nicht Standard-konform ist
+	 */
+	public abstract void parseRequest() throws IOException,
+			InvalidRequestException;
 
 }
