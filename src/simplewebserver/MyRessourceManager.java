@@ -1,5 +1,7 @@
 package simplewebserver;
 
+
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,21 +9,47 @@ import java.io.OutputStream;
 
 import simplewebserver.MySimpleRequest;
 import simplewebserver.MySimpleResponse;
+import create.AbstractSimpleRequest;
+import create.AbstractSimpleResponse;
+import create.RessourceManager;
 
-public interface MyRessourceManager {
+public class MyRessourceManager implements RessourceManager{
 
-	void doGet(AbstractSimpleRequest request, AbstractSimpleResponse response)
-			throws IOException;
+	@Override
+	public void doGet(AbstractSimpleRequest request,
+			AbstractSimpleResponse response) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
 
-	void doService(AbstractSimpleRequest request, AbstractSimpleResponse response)
-			throws IOException;
+	@Override
+	public void doService(AbstractSimpleRequest request,
+			AbstractSimpleResponse response) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void copyFile(File file, AbstractSimpleResponse response)
+			throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void copyStreams(InputStream in, OutputStream out)
+			throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void writeDirectoryAsHtml(File file, AbstractSimpleRequest request,
+			AbstractSimpleResponse response) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
 	
-	 void copyFile(File file, AbstractSimpleResponse response) throws IOException;
-
-	void copyStreams(InputStream in, OutputStream out) throws IOException;
-
-	void writeDirectoryAsHtml(File file, AbstractSimpleRequest request,
-			AbstractSimpleResponse response) throws IOException;
 
 
 }
