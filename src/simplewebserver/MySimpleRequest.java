@@ -27,7 +27,10 @@ public class MySimpleRequest extends AbstractSimpleRequest {
 	    boolean firstline = true;
 //	    lies solange vom Socket bis nichts mehr darin steht ..
 	    while( ( line = in.readLine() ) != null ) {
-//	        System.out.println(">>>>" + line );
+	    	if (line.equals("")){ 
+	    		break; 
+	    	}
+	        System.out.println(">>>>" + line );
 	        if(firstline){
 	        	firstline = false ;
 	        	scanFirstLine(line);

@@ -26,7 +26,7 @@ public class MyRessourceManager implements RessourceManager {
 	public void doGet(AbstractSimpleRequest request,
 			AbstractSimpleResponse response) throws IOException {
 		logger.info("doGet");
-
+		
 	}
 
 	@Override
