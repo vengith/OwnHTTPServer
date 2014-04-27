@@ -50,16 +50,6 @@ public abstract class AbstractSimpleRequest {
 	 * @return the ressourceURI
 	 */
 	public String getRessourceURI() {
-		String inGet = "";
-		try {
-			inGet = in.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		ressourceURI = inGet.substring(inGet.indexOf("GET") + 3, inGet.indexOf("HTML")).trim();
-		
 		return ressourceURI;
 	}
 
@@ -67,16 +57,6 @@ public abstract class AbstractSimpleRequest {
 	 * @return the protocolType
 	 */
 	public String getProtocolType() {
-		String inGet = "";
-		try {
-			inGet = in.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		protocolType = inGet.substring(inGet.indexOf('H'), inGet.indexOf('H')+7).trim();
-		
 		return protocolType;
 	}
 

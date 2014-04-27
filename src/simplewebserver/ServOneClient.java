@@ -42,6 +42,8 @@ public class ServOneClient extends Thread {
 			return;
 		}
 
+//		logger.info("Erstes TRY abgearbeitet");
+		
 		try {
 			request.parseRequest();
 		} catch (InvalidRequestException e) {
