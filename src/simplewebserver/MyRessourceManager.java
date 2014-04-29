@@ -18,15 +18,18 @@ import create.RessourceManager;
 public class MyRessourceManager implements RessourceManager {
 
 	Logger logger = Logger.getLogger(ServOneClient.class.getName());
+	String root = null;
 	
 	public MyRessourceManager (String string) {
-		// TODO Auto-generated constructor stub
+		root = string;
 	}
 
 	@Override
 	public void doGet(AbstractSimpleRequest request,
 			AbstractSimpleResponse response) throws IOException {
 		logger.info("doGet");
+		
+		
 		
 	}
 
