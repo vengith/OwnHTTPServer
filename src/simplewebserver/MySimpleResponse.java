@@ -19,8 +19,8 @@ public class MySimpleResponse extends AbstractSimpleResponse {
 
 	@Override
 	public void sendHeader() throws IOException {
-		// TODO Auto-generated method stub
-
+		out.append(myProtocolType);
+		
 	}
 
 }

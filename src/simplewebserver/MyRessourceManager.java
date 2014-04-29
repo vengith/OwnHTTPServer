@@ -2,6 +2,7 @@ package simplewebserver;
 
 
 
+import givenpackage.ContentType;
 import givenpackage.HttpCommand;
 import givenpackage.HttpStatus;
 
@@ -9,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URLDecoder;
 import java.util.logging.Logger;
 
 import create.AbstractSimpleRequest;
@@ -29,6 +31,13 @@ public class MyRessourceManager implements RessourceManager {
 			AbstractSimpleResponse response) throws IOException {
 		logger.info("doGet");
 		
+		File f = new File(URLDecoder.decode(root));
+		
+		if (f.isDirectory()) {
+			response.setContentType(ContentType.HTML);
+		} else {
+			//Wenn Datei(en)
+		}
 		
 		
 	}
