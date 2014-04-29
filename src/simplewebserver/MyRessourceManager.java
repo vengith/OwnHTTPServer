@@ -2,6 +2,7 @@ package simplewebserver;
 
 
 
+import givenpackage.HttpCommand;
 import givenpackage.HttpStatus;
 
 import java.io.File;
@@ -33,13 +34,12 @@ public class MyRessourceManager implements RessourceManager {
 	public void doService(AbstractSimpleRequest request,
 			AbstractSimpleResponse response) throws IOException {
 		logger.info("doService");
-		if (request.getRequestType().equals("GET")) {  //hier Fehler beim Vergleich auf GET (Frage im Forum)
+		if (request.getRequestType() == HttpCommand.GET) {  //Vergleich auf GET 
 			doGet(request, response);
 		} else {
 			//Setzt den Response Status auf BAD_REQUEST
 			response.setHttpStatus(HttpStatus.BAD_REQUEST);
 		}
-
 	}
 
 	@Override

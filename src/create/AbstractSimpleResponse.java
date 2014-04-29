@@ -12,8 +12,7 @@ import givenpackage.HttpStatus;
 
 public abstract class AbstractSimpleResponse {
 
-	private static Logger logger = Logger
-			.getLogger(AbstractSimpleResponse.class.getName());
+	private static Logger logger = Logger.getLogger(AbstractSimpleResponse.class.getName());
 	protected static final String CONTENT_TYPE = "content-type";
 	protected HttpStatus status = HttpStatus.OK;
 	boolean statusInitialized = false;
@@ -33,15 +32,14 @@ public abstract class AbstractSimpleResponse {
 
 	public void close() {
 		logger.info("closing socket and co ...");
-		out.println();
-		out.println();
-		out.close();
+		System.out.println();
+		System.out.println();
+		System.out.close();
 		try {
 			socket.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public void setContentType(ContentType type) {
